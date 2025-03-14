@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Kaskada Cafe</title>
+	<link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="MenuStyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="MainStyle.css">
+</head>
+<body>
+  <header class="header-nobootstrap">
+    <div class="header-container">
+        <div class="logo">
+            <img src="ASSETS/logo.jpg" alt="Kaskada Cafe">
+        </div>
+        <nav class="navbar-nobootstrap">
+            <ul class="nav-list">
+                <li class="hide-on-mobile"><a href="MainPage.html">Home</a></li>
+                <li class="hide-on-mobile"><a href="about.html">About</a></li>
+                <li class="hide-on-mobile"><a href="MenuPage.html">Products</a></li>
+                <li class="hide-on-mobile"><a href="gallery.html">Contact</a></li>
+                <li class="hide-on-desktop" onclick = showMenu()><i class="bi bi-list"></i></li>
+                <li class="hide-on-mobile"><a href="reviews.html">Review</a></li>
+                <li class="hide-on-mobile"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cart" onclick="toggleCartSidebar()">  <i class="bi bi-cart"></i>
+          <div class="cart-indicator">0</div>
+      </div>
+    </div>
+        <div class="hidden-nav">
+            <nav class="hidden-nav">
+                <ul class="hidden-nav-list">
+                    <li><a href="MainPage.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="MenuPage.html">Products</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+</header>
+<!-- Cart Sidebar -->
+<div id="cart-sidebar" class="cart-sidebar">
+  <div class="cart-sidebar-header">
+      <h2>Your Cart</h2>
+      <span class="close-cart-sidebar" onclick="toggleCartSidebar()">&times;</span>
+  </div>
+  <div class="cart-items-list"></div>
+  <div class="cart-sidebar-footer">
+      <div class="cart-total">Total: ₱0</div>
+      <button class="checkout-btn" onclick="proceedToCheckout()">Checkout</button>
+  </div>
+</div>
+    <div class="container">
+	<div class="logo-container">
+    <img src="ASSETS/logocontact.jpg" alt="Kaskada Cafe Logo">
+	</div>
+        <h2>Contact Us</h2>
+		<p>We welcome all questions, comments and feedback - It helps us make your<br>experience at Kaskada Cafe the best it can be. We’ll respond as quickly as possible.
+        <div class="contact-info">
+            <p>📍 Laoeng St, Poblacion, San Gabriel, 2513 La Union</p>
+            <p>📞 Phone: (+63) 543-1589</p>
+			<p>Monday to Sunday, 9AM - 7PM<br>Thursday, Closed</p>
+            <p>📧 Email: kaskadacafesg@gmail.com</p>
+        </div>
+
+        <form class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+			<input type="subject" name="subject" placeholder="Subject" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div class="map-location">
+            <div class="map-location-title"><span><h4>Find Us Here</h4></span></div>
+            <div class="google-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.0651830868214!2d120.4022195!3d16.673621299999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x339193b83be8bc59%3A0x848cb8b3b4657484!2sKaskada%20Cafe!5e0!3m2!1sen!2sph!4v1741882170389!5m2!1sen!2sph" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+			></iframe></div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-content">
+          <div class="footer-logo-section">
+          <div class="footer-logo">
+              <img src="ASSETS/logo.jpg" alt="Logo">
+              <div class="footer-logo-text">Kaskada Cafe</div>
+          </div>
+          <p class="footer-tagline">Cafe · Pizza place · Bakery</p>
+          </div>
+          
+          <div class="footer-links">
+          <div class="footer-column">
+              <h3>Product</h3>
+              <ul>
+              <li><a href="MenuPage.html">Our Products</a></li>
+              <li><a href="reviews.html">Reviews</a></li>
+              </ul>
+          </div>
+          
+          <div class="footer-column">
+              <h3>Company</h3>
+              <ul>
+              <li><a href="about.html">About us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              </ul>
+          </div>
+          
+          <div class="footer-column">
+              <h3>Social</h3>
+              <ul>
+              <li><a href="https://www.facebook.com/kaskadacafe">Facebook</a></li>
+              <li><a href="https://www.instagram.com/kaskadacafe">Instagram</a></li>
+              </ul>
+          </div>
+          
+          <div class="footer-column">
+              <h3>Legal</h3>
+              <ul>
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">Privacy</a></li>
+              </ul>
+          </div>
+          </div>
+      </div>
+  </footer>
+
+	<script src="contact.js"></script>
+  <script src="MenuScript.js"></script>
+  <script src="MainScript.js"></script>
+</body>
+</html>
